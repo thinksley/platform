@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>插件小窝</title>
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/util.js"></script>
+
+<script type="text/javascript">
+window.onload=function(){
+  var id=parseQueryString(window.location.href,'id');  
+  loadScript('js/data/article_'+id+'.js');
+
+  setTimeout(function(){
+      var str='';
+      document.getElementById('ar_head').innerHTML=data['title'];
+      document.getElementById('ar_body').innerHTML=data['content'];
+  },500);
+}
+</script>
+</head>
+
+<body class="green">
+<header id="top">
+   <div class="has_top clearfix">
+     <h1 id="logo">
+       插件小窝
+     </h1>
+     <nav id="nav">
+        <ul>
+          <li><a href="home.html">首页</a></li>
+        </ul>
+     </nav>
+   </div>
+</header>
+<section id="main">
+    <div class="has_main">
+       <div class="main_in">
+          <ul id="content_ul">
+            <li>
+               <div class="ar_head" >
+                 <h2 id="ar_head">
+                      
+                 </h2>
+               </div>
+               <div class="ar_body" id="ar_body">
+                  
+               </div>
+               
+            </li>
+          </ul>
+       </div>
+    </div>
+</section>
+<footer id="footer">
+   <div class="has_footer">
+     <div class="fl col">
+        <p id="license">
+          Copyright By.
+          <br>
+          南翔科技.
+        </p>
+     </div>
+     <div class="col fl">
+        <h1>Site Navigation</h1>
+        <a href="http://www.w3.org/html/logo/"><img alt="HTML5 Powered" src="images/html5_tech.png"></a>
+     </div>
+     <div class="col fl">
+       <h1>分享到</h1>
+       <ul class="social">
+          <li class="fl"><a href=""><img alt="sina" src="images/sina.gif"></a></li>
+          <li class="fl"><a href=""><img alt="qzone" src="images/qzone.gif"></a></li>
+          <li class="fl"><a href=""><img alt="facebook" src="images/facebook.png"></a></li>					
+        </ul>
+     </div>
+     
+   </div>
+</footer>
+</body>
+</html>
